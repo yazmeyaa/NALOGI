@@ -24,6 +24,7 @@ export const Button = styled.div`
     color: white;
     transition: .1s;
     text-decoration: none;
+    font-size: calc((100vw - 320px)/(1440 - 320) * (16 - 12) + 12);
 }
 &:hover{
     background: white;
@@ -36,5 +37,5 @@ export const Button = styled.div`
 export const StyledLink = styled(Link)`
 text-decoration: none;
 `
-//width is 50%
-//button padding 12-24px
+
+//font-size 12-16 px

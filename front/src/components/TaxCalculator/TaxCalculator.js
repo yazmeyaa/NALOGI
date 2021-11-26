@@ -1,7 +1,8 @@
-import React from 'react'
-import { Window, Content, Description, ContentContainer, Title, SubTitle, InputText, TextButton, TagButton, TagsContainer } from './styled'
+import {React, useState } from 'react'
+import { Window, Content, Description, ContentContainer, Title, SubTitle, InputText, TextButton, TagButton, TagsContainer, AddButton } from './styled'
 
-export default function TaxCalculator() {
+export default function TaxCalculator(){
+    const [isPaymentChoosed, setPaymentChoosed] = useState(true)
     return (
 <Window>
     <Content>
@@ -17,9 +18,21 @@ export default function TaxCalculator() {
         <ContentContainer>
             <SubTitle>Что уменьшаем?</SubTitle>
             <TagsContainer>
-                <TagButton active>Платёж</TagButton>
-                <TagButton active>Срок</TagButton>
+                <TagButton active={isPaymentChoosed} onClick={()=>{
+                    if(!isPaymentChoosed){
+                        setPaymentChoosed(prevState=>{
+                        return !prevState
+                    })}
+                }}>Платёж</TagButton>
+                <TagButton active={!isPaymentChoosed} onClick={()=>{
+                    if(isPaymentChoosed){
+                        setPaymentChoosed(prevState=>{
+                            return !prevState
+                        })
+                    }
+                }}>Срок</TagButton>
             </TagsContainer>
+            <AddButton>Добавить</AddButton>
         </ContentContainer>
     </Content>
 </Window>

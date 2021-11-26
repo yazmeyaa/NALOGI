@@ -106,6 +106,26 @@ background: ${props => {return props.active ? 'linear-gradient(255.35deg, #DC313
 border-radius: 50px;
 font-family: 'Lab Grotesque';
 font-weight: 400;
+transition: .5s;
+`
+
+export const AddButton = styled.div`
+display: flex;
+height: 40;
+justify-content: center;
+align-items: center;
+color: white;
+font-family: 'Lab Grotesque';
+font-weight: 500;
+font-size: calc( (100vw - 320px )/(1280 - 320) * (16 - 12) + 12px );
+background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), #FF5E56;
+box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+border-radius: 6px;
+padding: 16px 0;
+transition: .2s;
+&:hover{
+    background: red;
+}
 `
 
 //18-28

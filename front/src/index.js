@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import {createGlobalStyle} from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom';
-import { DataProvider } from './Context/DataContext';
+
 
 const Global = createGlobalStyle`
 body{
@@ -26,11 +26,9 @@ body{
 }
 `
 ReactDOM.render(
-  <DataProvider>
     <Router>
       <Global />
         <App />
-    </Router>
-  </DataProvider>,
+    </Router>,
   document.getElementById('root')
 );

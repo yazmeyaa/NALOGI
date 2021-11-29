@@ -1,17 +1,46 @@
 import styled from 'styled-components'
 
-export const Window = styled.div`
+export const Background = styled.div`
+background-color: rgba(0,0,0,0.3);
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+export const PushUpWindow = styled.div`
+box-sizing: border-box;
+padding: 32px 16px 16px 16px;
+background-color: white;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 100%;
+height: 100%;
+
+@media screen and (min-width: 768px){
+    border-radius: 30px;
+    height: auto;
+    width: 50%;
+}
+`
+
+export const ContentGridLayout = styled.div`
 display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 1fr;
-padding: 32px 16px 0px 16px;
+grid-template-columns: repeat(1fr);
+grid-template-rows: auto;
 `
 
 export const ContentContainer = styled.div`
-display: grid;
-grid-gap: 8px;
-grid-template-columns: 1fr;
-grid-template-rows: min-content 1fr;
+
+`
+
+export const Title = styled.div`
+box-sizing: border-box;
+font-size: calc( (100vw - 320px )/(1280 - 320) * (28 - 18) + 18px );
+font-family: 'Lab Grotesque';
+font-weight: 500;
 `
 
 export const Description = styled.div`
@@ -24,13 +53,6 @@ export const Description = styled.div`
 }
 `
 
-export const Title = styled.div`
-box-sizing: border-box;
-font-size: calc( (100vw - 320px )/(1280 - 320) * (28 - 18) + 18px );
-font-family: 'Lab Grotesque';
-font-weight: 500;
-`
-
 export const SubTitle = styled(Title)`
 font-family: 'Lab Grotesque';
 font-weight: 500;
@@ -38,13 +60,6 @@ font-size: 14px;
 box-sizing: border-box;
 `
 
-export const Content = styled.div`
-box-sizing: border-box;
-display:grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(min-content);
-grid-gap: 24px;
-`
 
 export const InputText = styled.input`
 box-sizing: border-box;
@@ -68,7 +83,7 @@ transition: .2s;
 }
 `
 
-export const TextButton = styled.div`
+export const TextButton = styled.button`
 font-family: 'Lab Grotesque';
 box-sizing: border-box;
 border: none;
@@ -87,14 +102,8 @@ line-height: 24px;
 }
 `
 
-export const TagsContainer = styled.div`
-display: grid;
-grid-template-columns: repeat(2, min-content);
-grid-template-rows: 1fr;
-grid-gap: 8px;
-`
-
-export const TagButton = styled.div`
+export const TagButton = styled.button`
+border: none;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -109,9 +118,11 @@ font-weight: 400;
 transition: .5s;
 `
 
-export const AddButton = styled.div`
+export const AddButton = styled.button`
+border: none;
 display: flex;
-height: 40;
+width: 100%;
+height: 40px;
 justify-content: center;
 align-items: center;
 color: white;

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Window = styled.div`
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: 1fr min-content;
+grid-template-rows: 1fr 1fr;
 padding: 32px 16px 0px 16px;
 `
 

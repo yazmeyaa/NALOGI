@@ -32,9 +32,9 @@ export default function TaxCalculator(){
                     }
                 }}>Срок</TagButton>
             </TagsContainer>
-            <AddButton>Добавить</AddButton>
         </ContentContainer>
     </Content>
+    <AddButton>Добавить</AddButton>
 </Window>
     )
 }
